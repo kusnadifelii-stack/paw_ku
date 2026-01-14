@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday My Love</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ffb6c1, #ffc0cb);
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      overflow-y: auto;
+    }
+    .card {
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px 30px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      animation: fadeIn 2s ease;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin: 12px 0;
+    }
+    .heart {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-top: 25px;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cover -->
+  <div id="cover" style="position:fixed;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#ff9acb,#ffc0d9);display:flex;align-items:center;justify-content:center;z-index:9999;flex-direction:column;color:#fff;text-align:center;">
+    <h1 style="font-size:2.2rem;margin-bottom:20px;">💌 Untuk Kamu 💌</h1>
+    <button onclick="openCard()" style="padding:15px 35px;font-size:1.1rem;border:none;border-radius:30px;background:#ff5fa2;color:#fff;cursor:pointer;box-shadow:0 10px 20px rgba(0,0,0,0.3);">
+      Buka Kartu 💖
+    </button>
+  </div>
+
+  <div class="card">
+    <img src="selfie-time-1767425933506.jpg.jpg" alt="Foto Kita" style="width:100%;border-radius:16px;margin-bottom:20px;box-shadow:0 10px 25px rgba(0,0,0,0.35);" />
+
+    <audio id="bgm" autoplay loop controls>
+      <source src="best-part-daniel-caesar.mp3" type="audio/mpeg">
+      Browser kamu tidak mendukung audio.
+    </audio>
+
+    <h1>Hi my sweetie pie 🤍</h1>
+
+    <p>Bolehkah aku meminta waktunya sebentar?</p>
+    <p>Aku ada sesuatu buat kamu</p>
+
+    <p><strong>Happy birthday my girlfriend 🖤🦋🤍</strong></p>
+
+    <p>
+      Seperti tahun sebelumnya, hari-hari pasti begitu berat bukan?
+      Tapi kabar baiknya kamu bisa melewatinya.
+      Walaupun tidak sesempurna itu kamu menjalaninya,
+      aku tetap bangga sama kamu 💕
+    </p>
+
+    <p>
+      Semoga di umur yang semakin berkurang ini,
+      sisanya kamu bisa manfaatkan lebih baik lagi ya.
+    </p>
+
+    <p>
+      Semoga tambah cantik, tambah pinter,
+      tambah sayang sama diri sendiri,
+      tambah cinta sama aku hehe.
+    </p>
+
+    <p>Semoga karir kita bisa melesat bersama ya sayang, biar kita bisa cepet nikah hehe.</p>
+
+    <p><strong>I love you, jangan pernah lupa 🖤</strong></p>
+
+    <p>
+      Jangan pernah lupa berarti, kalau di tahun ini kamu punya masalah
+      atau bahkan alam semesta tidak mendukungmu.
+      Jangan pernah lupa, aku orang pertama yang akan support kamu 💕
+    </p>
+
+    <div class="heart">🤍🖤🤍</div>
+  </div>
+  <!-- Love Animation -->
+  <div class="hearts"></div>
+  <style>
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: radial-gradient(#ff69b4 2px, transparent 2px);
+      background-size: 40px 40px;
+      opacity: 0.4;
+    }
+  </style>
+  <script>
+    function openCard() {
+      document.getElementById('cover').style.display = 'none';
+      const music = document.getElementById('bgm');
+      if (music) {
+        music.play();
+      }
+    }
+  </script>
+</body>
+</html>
